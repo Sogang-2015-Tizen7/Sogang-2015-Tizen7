@@ -1,0 +1,33 @@
+{
+    "places" : [{
+        "name" : "London",
+        "geolocation" : {
+            "lat" : 51.5073346,
+            "lng" : 0
+        }
+    }, {
+        "name" : "Paris",
+        "geolocation" : {
+            "lat" : 48.856614,
+            "lng" : 2.3522219
+        }
+    }, {
+        "name" : "Berlin",
+        "geolocation" : {
+            "lat" : 52.519171,
+            "lng" : 13.4060912
+        }
+    }, {
+        "name" : "Moscow",
+        "geolocation" : {
+            "lat" : 55.7427928,
+            "lng" : 37.6154009
+        }
+    }, {
+        "name" : "Rome",
+        "geolocation" : {
+            "lat" : 41.9015141,
+            "lng" : 12.4607737
+        }
+    }]
+}

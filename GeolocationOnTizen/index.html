@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, height=device-height">
+<title>Google Maps on Tizen</title>
+
+<link rel="stylesheet" href="./css/jquery.mobile.1.2.0.css" />
+<link rel="stylesheet" href="./css/jquery.mobile.theme-1.2.0.css" />
+<link rel="stylesheet" href="./css/jquery.mobile.structure-1.2.0.css" />
+<link rel="stylesheet" href="./css/style.css" />
+<script type="text/javascript" src="./js/lib/external/jquery-1.8.0.js"></script>
+<script type="text/javascript" src="./js/lib/external/jquery.mobile-1.2.0.js"></script>
+<script type="text/javascript" src="./js/lib/tlib/tlib.js"></script>
+<script type="text/javascript" src="./js/lib/tlib/tlib.logger.js"></script>
+<script type="text/javascript" src="./js/lib/tlib/tlib.view.js"></script>
+<script type="text/javascript" src="./js/lib/tlib/tlib.network.js"></script>
+<script type="text/javascript" src="./js/lib/tlib/tlib.ajax.js"></script>
+<script type="text/javascript" src="./js/googleMaps/googleLocation.js"></script>
+<script type="text/javascript" src="./js/googleMaps/googleDistance.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDdKjhStoKF6t0xxA_hFxYBmKrEb77b-nQ&sensor=true"></script>
+</head>
+
+<body>
+	<div data-role="page" id="main" data-theme="d">
+		<div data-role="header" data-position="fixed" data-theme="d">
+			<h1>Google Maps on Tizen</h1>
+		</div>
+		<div data-role="content" data-theme="d">
+			<ul data-role="listview">
+				<li id="myLocation"><a href="index.html">Acquiring your position</a></li>
+				<li id="whereIs"><a href="#positionToMap">Your position in Google Map view</a></li>
+				<li id="whereIs"><a href="#seoul">Basic Google Map view</a></li>
+				<li><a href="#getDirections">Get directions</a></li>
+				<li id="findLocation"><a href="#searchForPlaces">Search for places</a></li>
+				<li><a href="#findNearest">Find capital city nearest given location</a></li>
+				<li><a href="#streetView">Passive Google StreetView</a></li>
+			</ul>
+		</div>
+		<div data-role="popup" class="popup">
+			<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+			<p></p>
+		</div>
+	</div>
+	<div data-role="page" id="positionToMap" data-theme="d">
+		<div data-role="header" data-position="fixed" data-theme="d">
+			<h1>Your position in Google Map view</h1>
+		</div>
+		<div id="map_canvas_position"></div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#main">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="seoul" data-theme="d">
+		<div data-role="header" data-position="fixed" data-theme="d">
+			<h1>Basic Google Map view</h1>
+		</div>
+		<div id="map_canvas"></div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#main">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="searchForPlaces" data-theme="d">
+		<div data-role="header" data-position="fixed" data-theme="d">
+			<h1>Search for places</h1>
+		</div>
+		<div class="ui-body ui-body-b ui-corner-all myForm">
+			<div data-role="fieldcontain">
+				<label>Location to search for:</label> <input type="search" name="search" id="searchLocation" value="" />
+			</div>
+		</div>
+		<div id="searchMap"></div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#main">Home</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="popup" class="popup">
+			<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+			<p></p>
+		</div>
+	</div>
+
+	<div data-role="page" id="getDirections" data-theme="d">
+		<div data-role="header" data-position="fixed" data-theme="d">
+			<h1>Get directions</h1>
+		</div>
+		<div class="ui-body ui-body-b ui-corner-all myForm">
+			<div data-role="fieldcontain">
+				<label>Location from:</label> <input type="search" name="locationFrom" id="locationFrom" value="" data-mini="true" />
+			</div>
+			<div data-role="fieldcontain">
+				<label for="searchLocation">Location to:</label> <input type="search" name="locationTo" id="locationTo" value="" data-mini="true" />
+			</div>
+			<a href="" data-role="button" data-mini="true" id="getDirButton">OK</a>
+		</div>
+		<div id="directionsMap"></div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#main">Home</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="popup" class="popup">
+			<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+			<p></p>
+		</div>
+	</div>
+
+	<div data-role="page" id="findNearest" data-theme="d">
+		<div data-role="header" data-position="fixed" data-theme="d">
+			<h1>Find capital city nearest given location</h1>
+		</div>
+		<div class="ui-body ui-body-b ui-corner-all myForm">
+			<div data-role="fieldcontain">
+				<label>Location: </label> <input type="search" name="locationToFindNearest" id="locationToFindNearest" value="" data-mini="true" />
+			</div>
+		</div>
+		<ul data-role="listview" id="cityList">
+		</ul>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#main">Home</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="popup" class="popup">
+			<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+			<p></p>
+		</div>
+	</div>
+
+	<div data-role="page" id="streetView" data-theme="d">
+		<div data-role="header" data-position="fixed" data-theme="d">
+			<h1>Passive Google Street View</h1>
+		</div>
+		<div class="ui-body ui-body-b ui-corner-all myForm">
+			<div data-role="fieldcontain">
+				<label>Location: </label> <input type="search" name="locationToStreetView" id="locationToStreetView" value="" data-mini="true" />
+			</div>
+		</div>
+
+		<!-- <img src="" id="streetViewImg" /> -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#main">Home</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="popup" class="popup">
+			<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+			<p></p>
+		</div>
+	</div>
+
+</body>
+</html>
