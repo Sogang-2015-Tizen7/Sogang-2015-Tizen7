@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/RTVS" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="EFbrWkgOqA.RTVS" package="EFbrWkgOqA" required_version="2.3.1"/>
+    <access origin="*" subdomains="true"></access>
+    <content src="index.html"/>
+    <icon src="icon.png"/>
+    <name>Real Time Video Search</name>
+    <tizen:privilege name="http://tizen.org/privilege/location"/>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:setting screen-orientation="portrait" context-menu="enable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
+</widget>
