@@ -15,7 +15,7 @@
     <form id="form1" runat="server" method="post" enctype="multipart/form-data">
         <header id="header">
     		<h1>
-		    	<a href="Search.php?wa="><img src="../../contents/img/common_logo.png" alt="MAM 검색 서비스"/></a>
+		    	<a href="Search.php?wa="><img src="contents/img/common_logo.png" alt="MAM 검색 서비스"/></a>
 	    	</h1>
 		    <div class="search_wrap">
 			    <div>
@@ -79,10 +79,10 @@ Video <input type="file" name="videofile"/><br>
                             foreach($searchResults as $v2) { ?>
                                 <li>
 								<?php
-								echo $v2->imgPath;
-								$name = explode("/html/",$v2->imgPath);
+			//					echo $v2->imgPath;
+								$name = explode("kr/",$v2->imgPath);
 								$img = $name[1];
-								$name = explode("/html/",$v2->videoPath);
+								$name = explode("kr/",$v2->videoPath);
                                 $video = $name[1];?>
                                     <div class="thumbnail">
                                             <video id="myVideo<?php echo $vcount;?>" height="240px"  width="235px"  poster="<?php echo $img;?>"  controls >
