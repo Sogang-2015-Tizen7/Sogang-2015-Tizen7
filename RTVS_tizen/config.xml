@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="shttp://yourdomain/GoogleMemo" version="1.0.0" viewmodes="fullscreen">
+    <tizen:application id="hSD71hRsoZ.GoogleMapsonTizen" package="hSD71hRsoZ" required_version="2.1"/>
+    <access origin="*" subdomains="true"></access>
+    <content src="index.html"/>
+    <icon src="icon.png"/>
+    <name>Google Memo on Tizen</name>
+    <tizen:privilege name="http://tizen.org/privilege/location"/>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:setting screen-orientation="portrait" context-menu="enable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
+</widget>

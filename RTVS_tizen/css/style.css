@@ -1,0 +1,65 @@
+div[data-role="page"] {
+	height: 100%;
+}
+
+html {
+	height: 100%
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0
+}
+
+#my_canvas {
+	height: 75%;
+	width: 100%;
+}
+#memo_add{
+	width: 50%;	
+}
+#searchMap {
+	height: 66%;
+	width: 100%;
+}
+
+#directionsMap {
+	height: 50%;
+	width: 100%;
+}
+
+#markersMap {
+	height: 85%;
+	width: 100%;
+}
+
+#streetViewMap {
+	height: 30%;
+	width: 100%;
+}
+
+#streetViewPanorama {
+	height: 50%;
+	width: 100%;
+}
+
+#streetViewImg {
+	width:100%;
+	display: block;
+}
+
+/* Overides the Google Maps style change for fixed positioned footer */
+.ui-footer-fixed {
+	position: fixed !important;
+}
+
+/* More text in header can be displayed */
+.ui-title {
+	margin: 0.6em 7% .8em !important;
+}
+
+
+.myForm {
+	margin: 10px;
+}
