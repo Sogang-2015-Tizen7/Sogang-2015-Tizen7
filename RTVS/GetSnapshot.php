@@ -28,4 +28,4 @@ while($cSock = socket_accept($sSock))
     socket_close($cSock);
     echo "SERVER >> client Close.\n";
 }
-
+?>
