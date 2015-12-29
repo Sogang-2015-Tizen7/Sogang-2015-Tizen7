@@ -1,0 +1,48 @@
+WINE REGISTRY Version 2
+;; All keys relative to \\User\\.Default
+
+#arch=win64
+
+[Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders] 1451029772
+"AppData"="C:\\users\\root\\Application Data"
+"Cache"="C:\\users\\root\\Local Settings\\Temporary Internet Files"
+"Cookies"="C:\\users\\root\\Cookies"
+"Desktop"="C:\\users\\root\\\xbc14\xd0d5\xd654\xba74"
+"Favorites"="C:\\users\\root\\Favorites"
+"Fonts"="C:\\windows\\Fonts"
+"History"="C:\\users\\root\\Local Settings\\History"
+"Local AppData"="C:\\users\\root\\Local Settings\\Application Data"
+"My Music"="C:\\users\\root\\\xb0b4 \xc74c\xc545"
+"My Pictures"="C:\\users\\root\\\xb0b4 \xadf8\xb9bc"
+"My Videos"="C:\\users\\root\\\xb0b4 \xbe44\xb514\xc624"
+"NetHood"="C:\\users\\root\\NetHood"
+"Personal"="C:\\users\\root\\\xb0b4 \xbb38\xc11c"
+"PrintHood"="C:\\users\\root\\PrintHood"
+"Programs"="C:\\users\\root\\Start Menu\\Programs"
+"Recent"="C:\\users\\root\\Recent"
+"SendTo"="C:\\users\\root\\SendTo"
+"Start Menu"="C:\\users\\root\\Start Menu"
+"StartUp"="C:\\users\\root\\Start Menu\\Programs\\StartUp"
+"Templates"="C:\\users\\root\\Templates"
+
+[Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders] 1451029772
+"AppData"=str(2):"%USERPROFILE%\\Application Data"
+"Cache"=str(2):"%USERPROFILE%\\Local Settings\\Temporary Internet Files"
+"Cookies"=str(2):"%USERPROFILE%\\Cookies"
+"Desktop"=str(2):"%USERPROFILE%\\\xbc14\xd0d5\xd654\xba74"
+"Favorites"=str(2):"%USERPROFILE%\\Favorites"
+"Fonts"=str(2):"C:\\windows\\Fonts"
+"History"=str(2):"%USERPROFILE%\\Local Settings\\History"
+"Local AppData"=str(2):"%USERPROFILE%\\Local Settings\\Application Data"
+"My Music"=str(2):"%USERPROFILE%\\\xb0b4 \xc74c\xc545"
+"My Pictures"=str(2):"%USERPROFILE%\\\xb0b4 \xadf8\xb9bc"
+"My Videos"=str(2):"%USERPROFILE%\\\xb0b4 \xbe44\xb514\xc624"
+"NetHood"=str(2):"%USERPROFILE%\\NetHood"
+"Personal"=str(2):"%USERPROFILE%\\\xb0b4 \xbb38\xc11c"
+"PrintHood"=str(2):"%USERPROFILE%\\PrintHood"
+"Programs"=str(2):"%USERPROFILE%\\Start Menu\\Programs"
+"Recent"=str(2):"%USERPROFILE%\\Recent"
+"SendTo"=str(2):"%USERPROFILE%\\SendTo"
+"Start Menu"=str(2):"%USERPROFILE%\\Start Menu"
+"StartUp"=str(2):"%USERPROFILE%\\Start Menu\\Programs\\StartUp"
+"Templates"=str(2):"%USERPROFILE%\\Templates"
